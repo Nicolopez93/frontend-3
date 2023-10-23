@@ -1,0 +1,20 @@
+  #root {
+    list-style: none;
+    padding: 10;
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+  }
+
+  .product-item {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+
+  .product-item img {
+    max-width: 100%;
+    height: auto;
+    background-color: #ffd010;
+  }
