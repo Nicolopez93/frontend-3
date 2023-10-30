@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import Enviado from './Enviado';
+import Enviado from '../Enviado/Enviado';
+import './Registro.css';
 
 const Registro = () => {
     const [nombre, setNombre] = useState ("");
-    const [edad, setEdad] = useState(0);
+    const [edad, setEdad] = useState();
     const [pokemon, setPokemon] = useState("");
     const [show, setShow]= useState (false);
     const [error, setError]= useState (false);
@@ -30,7 +31,7 @@ const Registro = () => {
             <input type='numer' name='edad' value={edad} onChange={(event) => setEdad(event.target.value)}/>
             <label> Pokemon Favorito</label>
             <input type='text' name='pokemon' value={pokemon} onChange={(event) => setPokemon(event.target.value)}/>
-        <button>Enviar</button>
+            <button>Enviar</button>
         </form>
         {
             show ? <Enviado nombre={nombre} edad ={edad} pokemon={pokemon}/> : null
