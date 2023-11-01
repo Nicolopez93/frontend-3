@@ -1,15 +1,14 @@
 import './App.css'
-import Card from './components/Card'
+import Formulario from './components/Formulario';
 
 function App() {
 
 
   return (
-      <div className='App'>
+      <>
         <h1>Carga de Estudiante</h1>
-        <form></form>
-        <Card/>
-      </div>
+        <Formulario/>
+      </>
   );
 }
 
