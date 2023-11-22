@@ -16,9 +16,6 @@ const Registro = () => {
         }else{
             setError (true)
         }
-
-
-
     }
 
 
@@ -28,7 +25,7 @@ const Registro = () => {
             <label> Nombre Completo</label>
             <input type='text' name='nombre' value={nombre} onChange={(event) => setNombre(event.target.value)} />
             <label> Edad </label>
-            <input type='numer' name='edad' value={edad} onChange={(event) => setEdad(event.target.value)}/>
+            <input type='number' name='edad' value={edad} onChange={(event) => setEdad(event.target.value)}/>
             <label> Pokemon Favorito</label>
             <input type='text' name='pokemon' value={pokemon} onChange={(event) => setPokemon(event.target.value)}/>
             <button>Enviar</button>
