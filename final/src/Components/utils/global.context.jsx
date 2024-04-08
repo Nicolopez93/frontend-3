@@ -1,15 +1,19 @@
-import { createContext } from "react";
+  import { createContext, useMemo } from "react";
 
-export const initialState = {theme: "", data: []}
+  export const initialState = { theme: "", data: [] };
 
-export const ContextGlobal = createContext(undefined);
+  export const ContextGlobal = createContext(undefined);
 
-export const ContextProvider = ({ children }) => {
-  //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
+  export const ContextProvider = ({ children }) => {
+    const value = useMemo(() => {
+      const theme = localStorage.getItem("theme");
+      
+      return {};
+    }, []);
 
-  return (
-    <ContextGlobal.Provider value={{}}>
-      {children}
-    </ContextGlobal.Provider>
-  );
-};
+    return (
+      <ContextGlobal.Provider value={value}>
+        {children}
+      </ContextGlobal.Provider>
+    );
+  };
